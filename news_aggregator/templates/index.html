@@ -39,20 +39,20 @@
            <input id="searchBar" name="searchBar" placeholder="Search Location"/>
          </div>
 
-         <div id="feed">
+        <div id="feed">
             <h1 id="feedTitle">Newsfeed</h1>
             <hr>
             <div id="scrollable">
               <div id="updates">
                 <!-- New messages will be dynamically added here. -->
 
-                {% for x in country_list%}
+		            {% for x in country_list %}
                 <div class="update">
-                  <h1 class="updateTitle">{{x}}</h1>
+                  <h1 class="updateTitle">news happening in  {{x[0]}}</h1>
                   <hr>
-                  <p class="updateDesc">{{x}}</p>
+                  <p class="updateDesc"> {{x[1]}}</p>
                 </div>
-                {%endfor%}
+                  {% endfor %}
 
               </div>
             </div>
